@@ -18,7 +18,7 @@ export default function FAQComponent() {
                 </h2>
 
                 <p className="text-lg text-gray-600">
-                    Follow our newsletter. We'll regularly update you about our latest projects and availability.
+                    Follow our newsletter. We&apos;ll regularly update you about our latest projects and availability.
                 </p>
 
                 <div className="flex items-center justify-center gap-2">
@@ -27,7 +27,7 @@ export default function FAQComponent() {
                     placeholder="Enter your email"
                     className="h-12 px-4 rounded-md border border-gray-300 w-full sm:w-[300px] text-sm focus:outline-none focus:ring-2 focus:ring-[#0A3E94]"
                 />
-                <Button className="h-12 px-6 text-sm">Let's Talk</Button>
+                <Button className="h-12 px-6 text-sm">Let&apos;s Talk</Button>
                 </div>
 
                 <Link href="#" className="flex text-[#0fb287] items-center gap-1 text-2xl font-bold mt-10">
