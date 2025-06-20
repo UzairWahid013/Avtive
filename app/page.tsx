@@ -27,8 +27,8 @@ export default function Home() {
           isModalOpen && <AccessPopup handleModalClose={handleModalClose} />
         }
         <main className="w-full max-w-[1920px] mx-auto">
-          <HeroSection />
-          <FeatureSection handleModalOpen={handleModalOpen} />
+          <HeroSection handleModalOpen={handleModalOpen}/>
+          <FeatureSection  />
           <LaunchingSoon />
           <FAQComponent />
         </main>

@@ -89,39 +89,29 @@ export default function Footer() {
             Join the Waitlist Today! Be among the first to experience Avtive with priority access & exclusive perks.
           </p>
             <div className="flex gap-3 justify-center md:justify-start">
-  {/* Google Play */}
-  <div className="relative overflow-hidden">
-    <Image
+  {/* Google Play and App Store icons */}
+  <Image
       src="/social/googleplay.svg"
       alt="google play"
       width={130}
       height={30}
     />
-    <span className="absolute right-[-30px] top-[8px] rounded-sm rotate-45 bg-[#F8FBFF] text-black text-[11px] px-8 py-[2px] font-bold shadow-lg border border-gray-300">
-    Soon!
-    </span>
-  </div>
-
-  {/* App Store */}
-  <div className="relative overflow-hidden">
     <Image
       src="/social/appstore.svg"
-      alt="app store"
+      alt="google play"
       width={130}
       height={30}
     />
-    <span className="absolute right-[-25px] top-[8px] rounded-sm rotate-45 bg-[#F8FBFF] text-black text-[11px] px-8 py-[2px] font-bold shadow-lg border border-gray-300">
-    Soon!
-    </span>
-  </div>
+  
 </div>
           </div>
 
         </div>
 
-        <h2 className="text-[16px] md:text-[20.47px] text-center m-auto mt-20 md:mt-40 mb-4">
-  © 2025 Avtive All Rights Reserved
-</h2>      </Container>
+        <h2 className="text-[16px] md:text-[20.47px] text-center m-auto mt-10 md:mt-40 pb-5 md:mb-4">
+          © 2025 Avtive All Rights Reserved
+        </h2>      
+</Container>
     </footer>
   )
 }

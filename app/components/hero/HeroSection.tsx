@@ -2,12 +2,21 @@
 import React from "react";
 import { TextComponent } from "./TextComponent";
 import Image from "next/image";
+import AnimatedButton from './../AnimatedButton/AnimatedButton';
 
-function HeroSection() {
+function HeroSection({ handleModalOpen }: { handleModalOpen: () => void }) {
     return (
         <div>
             <TextComponent />
+            <div className="flex justify-center mb-10">
+            <AnimatedButton onClick={handleModalOpen}>
+                    Join Waitlist
+                </AnimatedButton>
+                </div>
             <div className="relative w-full h-[70vh]  items-center gap-5 px-10 hidden lg:flex justify-around">
+            <div className="mb-12 md:hidden">
+                
+                </div>
                 <Image src={'/hero/color_background.png'} alt="background" width={900} height={900}
                     layout="responsive"
                     className="absolute inset-0 w-full h-full object-cover z-[-1] mt-10" />
