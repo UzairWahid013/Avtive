@@ -21,7 +21,8 @@ export default function Home() {
 
   return (
     <>
-      <Navbar handleModalOpen={handleModalOpen} />
+              <Navbar handleModalOpen={handleModalOpen} />
+
       <div className="overflow-x-hidden">
         {
           isModalOpen && <AccessPopup handleModalClose={handleModalClose} />
@@ -31,10 +32,11 @@ export default function Home() {
           <FeatureSection  />
           <LaunchingSoon />
           <FAQComponent />
+          <Footer />
         </main>
 
       </div>
-      <Footer />
+      
     </>
   );
 }

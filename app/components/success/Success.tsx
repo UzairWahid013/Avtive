@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { GradientHeading } from "../headings/GradientHeading";
 import { X } from 'lucide-react';
+import Confetti from '@/app/components/confetti/Confetti'; // Add this import
 
 interface SuccessProps {
     onClose: () => void;
@@ -10,10 +11,10 @@ interface SuccessProps {
 export default function Success({ onClose }: SuccessProps) {
     return (
         <div className="overflow-x-hidden w-screen bg-black/30 h-screen fixed top-0 left-0 z-50 flex items-center justify-center">
-            <div className="w-[95%] py-20 md:w-full p-6 md:w-[60%] md:p-20 md:max-w-[600px] bg-white rounded-2xl">
-                
-                {/* Close Button */}
-                <div className="flex justify-end md:-mt-[3.5rem] md:-mr-[4rem] -mt-2 -mr-2">
+            {/* Add Confetti here - it will only show when modal is open */}
+            <Confetti active={true} />
+            
+            <div className="w-[95%] py-5 md:py-20 p-6 md:w-[60%] md:p-20 md:max-w-[600px] bg-white rounded-2xl">                <div className="flex justify-end md:-mt-[3.5rem] md:-mr-[4rem] -mt-2 -mr-2">
                     <button onClick={onClose} className="hover:bg-gray-100 rounded-full p-2">
                         <X className="w-6 h-6 md:w-8 md:h-8 cursor-pointer" />
                     </button>

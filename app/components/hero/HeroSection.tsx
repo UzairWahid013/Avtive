@@ -6,9 +6,9 @@ import AnimatedButton from './../AnimatedButton/AnimatedButton';
 
 function HeroSection({ handleModalOpen }: { handleModalOpen: () => void }) {
     return (
-        <div>
+        <div className="w-full max-w-[1920px] mx-auto">
             <TextComponent />
-            <div className="flex justify-center mb-10">
+            <div className="flex justify-center mb-10 md:hidden">
             <AnimatedButton onClick={handleModalOpen}>
                     Join Waitlist
                 </AnimatedButton>
@@ -69,7 +69,7 @@ function HeroSection({ handleModalOpen }: { handleModalOpen: () => void }) {
                         height={66.61}
                         className="h-fit relative left-1/6 mt-5 animate-fade-in-right duration-1000 delay-200"
                     />
-                    <div className="flex flex-col items-center relative left-85 bottom-10  bg-[#FFFFFF80] w-[171px] h-[87.46px] justify-center rounded-[20px]">
+                    <div className="flex flex-col items-center relative left-85 bottom-10  bg-[#FFFFFF80] w-[171px] h-[100.46px] justify-center rounded-[20px]">
                         <Image
                             src={'/animate-icons/error1.svg'}
                             alt="error"
@@ -80,7 +80,7 @@ function HeroSection({ handleModalOpen }: { handleModalOpen: () => void }) {
                         <p className="text-center text-xs font-medium">Limited networking<br /> and outdated contact <br />methods</p>
                     </div>
 
-                    <div className="flex flex-col items-center relative left-15 bottom-18 bg-[#FFFFFF80] w-[171px] h-[76.46px] rounded-[20px]">
+                    <div className="flex flex-col items-center relative left-15 bottom-18 bg-[#FFFFFF80] w-[171px] h-[86.46px] rounded-[20px]">
                         <Image
                             src={'/animate-icons/error1.svg'}
                             alt="error"

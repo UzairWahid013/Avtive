@@ -138,7 +138,7 @@ function Navbar({ handleModalOpen }: { handleModalOpen: () => void }) {
                             onClick={toggleMenu} 
                             variant="ghost" 
                             size="icon"
-                            className="md:hidden h-10 w-10"
+                            className="hidden md:hidden h-10 w-10"
                         >
                             <Menu className="h-6 w-6" />
                         </Button>
