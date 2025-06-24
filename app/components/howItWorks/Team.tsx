@@ -8,7 +8,7 @@ const Team = () => {
     <div className="hidden md:block w-full h-100 my-10 relative">
       <div className="absolute left-32 top-10 flex justify-center items-center w-[236px] h-[60px] border border-dashed rounded-[10px]">
         <h1 className="text-lg bg-gradient-to-r from-[#0FB287] to-[#0A3E94] text-transparent bg-clip-text font-normal text-[18px] leading-[25px]">
-          Sign-Up or Register
+          Sign-Up or Register 
         </h1>
       </div>
 
