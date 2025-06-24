@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { TextComponent } from "./TextComponent";
 import AnimatedButton from "./../AnimatedButton/AnimatedButton";
-import { Button } from "@/components/ui/button";
 import Problem from "./Problem";
 import Solution from "./Solution";
 function HeroSection({ handleModalOpen }: { handleModalOpen: () => void }) {

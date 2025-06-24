@@ -7,7 +7,6 @@ import { HeroSection } from "./components/hero/HeroSection";
 import { LaunchingSoon } from "./components/launching/LaunchingSoon";
 import { Navbar } from "./components/navbar/Navbar";
 import AccessPopup from "./components/AccessPopup/AccessPopup";
-import NewsLetter from "./components/newsletter/NewsLetter";
 import HowItWorks from "./components/howItWorks/HowItWorks";
 
 export default function Home() {

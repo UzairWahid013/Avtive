@@ -1,5 +1,4 @@
 import React from 'react';
-import { GradientHeading } from '../headings/GradientHeading';
 import Image from 'next/image';
 
 const Team = () => {
