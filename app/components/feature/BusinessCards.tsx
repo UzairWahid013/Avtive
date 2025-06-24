@@ -151,7 +151,7 @@ export default function DigitalBusinessCard() {
   );
 
   return (
-    <div className="px-4 py-0 mt-[30px] md:mt-[97px] flex w-[95%] m-auto select-none">
+    <div className="px-4 py-0 mt-[30px] md:mt-[97px] flex w-[95%] m-auto select-none mb-40">
       {/* Mobile - Vertical Stack */}
       <div className="md:hidden w-full space-y-6">
         {cardData.map(renderCard)}

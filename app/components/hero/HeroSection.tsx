@@ -1,12 +1,25 @@
 'use client';
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { TextComponent } from "./TextComponent";
 import AnimatedButton from "./../AnimatedButton/AnimatedButton";
-
+import { Button } from "@/components/ui/button";
+import Problem from "./Problem";
+import Solution from "./Solution";
 function HeroSection({ handleModalOpen }: { handleModalOpen: () => void }) {
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalType, setModalType] = useState<"problem" | "solution" | null>(null);
+  const openModal = (type: "problem" | "solution") => {
+    setModalType(type);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+    setModalType(null);
+  };
   return (
-    <div className="w-full max-w-[1920px] mx-auto">
+    <div className="w-full max-w-[1920px] mx-auto mb-40">
       <TextComponent />
 
       {/* Mobile CTA Button */}
@@ -40,14 +53,14 @@ function HeroSection({ handleModalOpen }: { handleModalOpen: () => void }) {
             alt="smart"
             width={132}
             height={25}
-            className="h-fit relative left-45 bottom-25"
+            className="h-fit relative left-45 bottom-25 animate-bounce duration-1000"
           />
           <Image
             src="/hero/icons/seo.svg"
             alt="seo"
             width={170}
             height={26}
-            className="mt-2 h-fit relative left-60 bottom-12"
+            className="mt-2 h-fit relative left-60 bottom-12 animate-bounce duration-1000"
           />
           <Image
             src="/hero/icons/ai.svg"
@@ -116,14 +129,38 @@ function HeroSection({ handleModalOpen }: { handleModalOpen: () => void }) {
       </div>
 
       {/* Mobile Background */}
-      <Image
-        src="/hero/Mobile_bg.svg"
-        alt="mobile background"
-        width={900}
-        height={900}
-        layout="responsive"
-        className="w-full lg:w-full h-full object-cover mt-0 block lg:hidden"
-      />
+      {/* Mobile Background with Buttons */}
+<div className="relative block lg:hidden w-full">
+  {/* Background Image */}
+  <Image
+    src="/hero/Mobile_bg.svg"
+    alt="mobile background"
+    width={900}
+    height={900}
+    layout="responsive"
+    className="w-full h-auto object-cover"
+  />
+
+  {/* Left Button */}
+  <div className="absolute top-1/2 left-2 transform -translate-y-1/2">
+  <button className="text-[9.5px] bg-[#FFD2CF] text-black px-2 py-1 rounded-sm"             onClick={() => openModal("problem")}  >Problem</button>
+  </div>
+
+  {/* Right Button */}
+  <div className="absolute top-1/2 right-2 transform -translate-y-1/2">
+  <button className="text-[9.5px] bg-[#B3E8D8] text-black px-2 py-1 rounded-sm"             onClick={() => openModal("solution")}
+  >Solution</button>
+  </div>
+</div>
+{modalOpen && (
+        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center px-4">
+          <div className="relative">
+  {modalType === "problem" && <Problem closeModal={closeModal} />}
+  {modalType === "solution" && <Solution closeModal={closeModal} />}
+</div>
+        </div>
+      )}
+
     </div>
   );
 }

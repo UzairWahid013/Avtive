@@ -66,12 +66,26 @@ export default function Footer() {
 
               {/* Social Media Icons */}
               <div className="flex justify-around w-full mx-auto md:mx-0">
-                <Image src="/social/facebook.svg" alt="facebook" width={40.4} height={40.4} />
-                <Image src="/social/instagram.svg" alt="instagram" width={40.4} height={40.4} />
-                <Image src="/social/linkedin.svg" alt="linkedin" width={40.4} height={40.4} />
-                <Image src="/social/youtube.svg" alt="youtube" width={40.4} height={40.4} />
-                <Image src="/social/x.svg" alt="x" width={40.4} height={40.4} />
-              </div>
+  {[
+    { href: "https://www.facebook.com/avtive.co/", src: "/social/facebook.svg", alt: "Facebook" },
+    { href: "https://www.instagram.com/avtive.ai/?igsh=cjljYndyN2w2eTJq&utm_source=qr#", src: "/social/instagram.svg", alt: "Instagram" },
+    { href: "https://www.linkedin.com/company/avtive/?viewAsMember=true", src: "/social/linkedin.svg", alt: "LinkedIn" },
+    { href: "https://www.youtube.com/@Avtive-e8z", src: "/social/youtube.svg", alt: "YouTube" },
+    { href: "https://x.com/avtiveapp", src: "/social/x.svg", alt: "X (Twitter)" }
+  ].map(({ href, src, alt }, idx) => (
+    <Link
+      key={idx}
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="transition-transform duration-300 transform hover:scale-110"
+    >
+      <Image src={src} alt={alt} width={40.4} height={40.4} />
+    </Link>
+  ))}
+</div>
+
+
             </div>
           </div>
 

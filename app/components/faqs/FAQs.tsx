@@ -32,7 +32,7 @@ const FAQ_ITEMS = [
 export default function FAQComponent() {
   return (
     <Container>
-      <div id="faqs" className="-mt-[4rem] px-4 py-12 mb-4">
+      <div id="faqs" className="px-4 py-12 mb-4">
         {/* Mobile Help Section with Newsletter Signup */}
         <div className="md:hidden mb-16 text-left space-y-3">
           <h2 className="text-3xl md:text-4xl font-bold">
