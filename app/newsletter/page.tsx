@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
-import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react"
+// import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react"
 const NewsLetter = () => {
   return (
     <div className="max-w-2xl mx-auto bg-white">
@@ -106,7 +106,7 @@ const NewsLetter = () => {
         {/* Call to Action */}
         <div className="text-black text-sm p-6 mb-8">
           <p className=" mb-4">
-            We're excited to help you connect smarter and grow faster with
+            Were excited to help you connect smarter and grow faster with
             Avtive.
           </p>
           <p className="mb-4">
