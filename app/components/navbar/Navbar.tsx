@@ -48,7 +48,7 @@ function Navbar({ handleModalOpen }: { handleModalOpen: () => void }) {
                 {[
                   { href: "/#feature", label: "Features" },
                   { href: "/#faqs", label: "FAQs" },
-                  { href: "/docs", label: "Beta Access" },
+                  { href: "/betaAccess", label: "Beta Access" },
                 ].map(({ href, label }) => (
                   <NavigationMenuItem key={label}>
                     <Link href={href} legacyBehavior passHref>

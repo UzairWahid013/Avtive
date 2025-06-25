@@ -141,12 +141,12 @@ function HeroSection({ handleModalOpen }: { handleModalOpen: () => void }) {
   />
 
   {/* Left Button */}
-  <div className="absolute top-1/2 left-2 transform -translate-y-1/2">
+  <div className="absolute top-1/2 left-1 transform -translate-y-1/2">
   <button className="text-[9.5px] bg-[#FFD2CF] text-black px-2 py-1 rounded-sm"             onClick={() => openModal("problem")}  >Problem</button>
   </div>
 
   {/* Right Button */}
-  <div className="absolute top-1/2 right-2 transform -translate-y-1/2">
+  <div className="absolute top-1/2 right-1 transform -translate-y-1/2">
   <button className="text-[9.5px] bg-[#B3E8D8] text-black px-2 py-1 rounded-sm"             onClick={() => openModal("solution")}
   >Solution</button>
   </div>

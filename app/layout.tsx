@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from 'next/font/google';
 import "./globals.css";
 import localFont from 'next/font/local';
+import Footer from "./components/footer/Footer";
 
 const inter = Inter({
   subsets: ['latin'],
@@ -51,6 +52,7 @@ export default function RootLayout({
         className={`${inter.variable} ${lufga.variable} antialiased`}
       >
         {children}
+        <Footer />
       </body>
     </html>
   );
